@@ -1,6 +1,6 @@
 {
   "name": "sagess-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Focus library core",
   "main": "index.js",
   "babel": {
