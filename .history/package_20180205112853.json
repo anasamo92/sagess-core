@@ -1,7 +1,7 @@
 {
-    "name": "focus-core",
+    "name": "sagess-core",
     "version": "2.2.1",
-    "description": "Focus library core part.",
+    "description": "Sagess core library part.",
     "main": "index.js",
     "babel": {
         "presets": [
@@ -10,20 +10,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/KleeGroup/focus-core.git"
+        "url": "https://github.com/KleeGroup/sagess-core.git"
     },
     "keywords": [
         "spa",
         "react",
         "es6"
     ],
-    "author": "focus@kleegroup.com",
-    "documentation": "http://kleegroup.github.io/focus-docs/",
-    "license": "MIT",
-    "homepage": "https://github.com/KleeGroup/focus-core",
-    "bugs": {
-        "url": "https://github.com/KleeGroup/focus-core/issues"
-    },
+
+
     "scripts": {
         "build": "better-npm-run babelify",
         "test": "better-npm-run test",

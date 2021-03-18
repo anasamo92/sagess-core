@@ -18,7 +18,7 @@ function _beforeRouting(newRoute){
 // Creates a router from the router argument given to this function
 // Example
 // create a file in your project `default-[yourProjectName]-router.js`
-//import createRouter from 'focus-core/router';
+//import createRouter from 'sagess-core/router';
 //export default createRouter(window.Backbone.Router);
 // in each router file
 // import DefaultProjectRouter from './default-project-router'
