@@ -1,13 +1,5 @@
 let fs = require('fs');
 let path = require('path');
-// var babel = require('babel-core');
-
-// var babelOptions = {
-//     "presets": [
-//         "sagess"
-//     ],
-//     sourceMaps: 'inline'
-// };
 
 var walk = function (dir) {
     let files = [];

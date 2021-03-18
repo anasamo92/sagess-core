@@ -11,4 +11,4 @@ export default function clearComponent(targetSelector) {
         delete mountedComponents[targetSelector];
         console.info('Component ' + targetSelector + ' unmounted.');
     }
-};
+}

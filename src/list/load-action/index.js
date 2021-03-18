@@ -71,4 +71,4 @@ export default function loadActionFn(config) {
             .then(_dispatchResult)
             .catch(_errorOnCall);
     };
-};
+}
