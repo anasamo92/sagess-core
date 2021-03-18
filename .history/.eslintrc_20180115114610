@@ -1,6 +1,0 @@
-{
-    "extends": "focus",
-    "rules": {
-        "require-jsdoc": "off"
-    }
-}
