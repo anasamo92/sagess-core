@@ -1,6 +1,6 @@
 {
   "name": "sagess-core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Sagess core library",
   "main": "index.js",
   "babel": {
