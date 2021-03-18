@@ -4,7 +4,7 @@ let path = require('path');
 
 // var babelOptions = {
 //     "presets": [
-//         "focus"
+//         "sagess"
 //     ],
 //     sourceMaps: 'inline'
 // };

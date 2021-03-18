@@ -12,5 +12,5 @@
 
 ## Versions
 
-Focus-core: [version]
-Focus-components: [version]
+sagess-core: [version]
+sagess-components: [version]
