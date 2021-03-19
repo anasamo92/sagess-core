@@ -1,6 +1,6 @@
 # Component
 
-Cette partie de focus a pour vocation de fournir les outils nécessaires à la création de composants.
+Cette partie de sagess a pour vocation de fournir les outils nécessaires à la création de composants.
 
 ## builder
 

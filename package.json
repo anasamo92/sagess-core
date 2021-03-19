@@ -5,7 +5,7 @@
   "main": "index.js",
   "babel": {
     "presets": [
-      "focus"
+      "sagess"
     ]
   },
   "keywords": [
@@ -66,9 +66,9 @@
   },
   "devDependencies": {
     "babel-jest": "21.0.2",
-    "babel-preset-focus": "1.0.0",
+    "babel-preset-sagess": "^1.0.6",
     "better-npm-run": "0.1.0",
-    "eslint-config-focus": "0.6.0",
+    "eslint-config-sagess": "^1.0.6",
     "jest-cli": "21.0.2",
     "jsdom": "11.2.0",
     "moment": "2.18.1",
