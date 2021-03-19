@@ -1,9 +1,27 @@
-/*global document*/
-//dependencies
-import React from 'react';
-import ReactDOM from 'react-dom';
-import mountedComponents from './mounted-components';
-import clearComponent from './clear';
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = renderComponent;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _mountedComponents = require('./mounted-components');
+
+var _mountedComponents2 = _interopRequireDefault(_mountedComponents);
+
+var _clear = require('./clear');
+
+var _clear2 = _interopRequireDefault(_clear);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
 *  Render a react component in a DOM selector.
@@ -11,21 +29,22 @@ import clearComponent from './clear';
 * @param {string} selector  - A selector on a DOM node.
 * @param {object} options   - Options for the component rendering.
 */
-export default function renderComponent(component, selector, options) {
+/*global document*/
+//dependencies
+function renderComponent(component, selector, options) {
     options = options || {};
     // Clear a potential previously mounted component
-    clearComponent(selector);
-    const targetDOMContainer = document.querySelector(selector);
+    (0, _clear2.default)(selector);
+    var targetDOMContainer = document.querySelector(selector);
     if (!targetDOMContainer) {
-        throw new Error(`You are trying to render a component in a DOM element which is not existing, your selector is  ${selector}`);
+        throw new Error('You are trying to render a component in a DOM element which is not existing, your selector is  ' + selector);
     }
     // Render the component
-    const mountedComponent = ReactDOM.render(
-        React.createElement(component, options.props, options.data),
-        targetDOMContainer
-    );
+    var mountedComponent = _reactDom2.default.render(_react2.default.createElement(component, options.props, options.data), targetDOMContainer);
     //Save the fact that a component is mounted.
-    mountedComponents[selector] = mountedComponent;
-    console.info('Mounted components : ', Object.keys(mountedComponents));
+    _mountedComponents2.default[selector] = mountedComponent;
+    console.info('Mounted components : ', Object.keys(_mountedComponents2.default));
     return mountedComponent;
 }
+module.exports = exports['default'];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2Nlc3Nvci5qcyJdLCJuYW1lcyI6WyJyZW5kZXJDb21wb25lbnQiLCJjb21wb25lbnQiLCJzZWxlY3RvciIsIm9wdGlvbnMiLCJ0YXJnZXRET01Db250YWluZXIiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJFcnJvciIsIm1vdW50ZWRDb21wb25lbnQiLCJSZWFjdERPTSIsInJlbmRlciIsIlJlYWN0IiwiY3JlYXRlRWxlbWVudCIsInByb3BzIiwiZGF0YSIsIm1vdW50ZWRDb21wb25lbnRzIiwiY29uc29sZSIsImluZm8iLCJPYmplY3QiLCJrZXlzIl0sIm1hcHBpbmdzIjoiOzs7OztrQkFhd0JBLGU7O0FBWHhCOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQTs7Ozs7O0FBUEE7QUFDQTtBQVllLFNBQVNBLGVBQVQsQ0FBeUJDLFNBQXpCLEVBQW9DQyxRQUFwQyxFQUE4Q0MsT0FBOUMsRUFBdUQ7QUFDbEVBLGNBQVVBLFdBQVcsRUFBckI7QUFDQTtBQUNBLHlCQUFlRCxRQUFmO0FBQ0EsUUFBTUUscUJBQXFCQyxTQUFTQyxhQUFULENBQXVCSixRQUF2QixDQUEzQjtBQUNBLFFBQUksQ0FBQ0Usa0JBQUwsRUFBeUI7QUFDckIsY0FBTSxJQUFJRyxLQUFKLHFHQUE0R0wsUUFBNUcsQ0FBTjtBQUNIO0FBQ0Q7QUFDQSxRQUFNTSxtQkFBbUJDLG1CQUFTQyxNQUFULENBQ3JCQyxnQkFBTUMsYUFBTixDQUFvQlgsU0FBcEIsRUFBK0JFLFFBQVFVLEtBQXZDLEVBQThDVixRQUFRVyxJQUF0RCxDQURxQixFQUVyQlYsa0JBRnFCLENBQXpCO0FBSUE7QUFDQVcsZ0NBQWtCYixRQUFsQixJQUE4Qk0sZ0JBQTlCO0FBQ0FRLFlBQVFDLElBQVIsQ0FBYSx1QkFBYixFQUFzQ0MsT0FBT0MsSUFBUCxDQUFZSiwyQkFBWixDQUF0QztBQUNBLFdBQU9QLGdCQUFQO0FBQ0giLCJmaWxlIjoicHJvY2Vzc29yLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLypnbG9iYWwgZG9jdW1lbnQqL1xyXG4vL2RlcGVuZGVuY2llc1xyXG5pbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcclxuaW1wb3J0IG1vdW50ZWRDb21wb25lbnRzIGZyb20gJy4vbW91bnRlZC1jb21wb25lbnRzJztcclxuaW1wb3J0IGNsZWFyQ29tcG9uZW50IGZyb20gJy4vY2xlYXInO1xyXG5cclxuLyoqXHJcbiogIFJlbmRlciBhIHJlYWN0IGNvbXBvbmVudCBpbiBhIERPTSBzZWxlY3Rvci5cclxuKiBAcGFyYW0ge29iamVjdH0gY29tcG9uZW50IC0gQSByZWFjdCBjb21wb25lbnQuXHJcbiogQHBhcmFtIHtzdHJpbmd9IHNlbGVjdG9yICAtIEEgc2VsZWN0b3Igb24gYSBET00gbm9kZS5cclxuKiBAcGFyYW0ge29iamVjdH0gb3B0aW9ucyAgIC0gT3B0aW9ucyBmb3IgdGhlIGNvbXBvbmVudCByZW5kZXJpbmcuXHJcbiovXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIHJlbmRlckNvbXBvbmVudChjb21wb25lbnQsIHNlbGVjdG9yLCBvcHRpb25zKSB7XHJcbiAgICBvcHRpb25zID0gb3B0aW9ucyB8fCB7fTtcclxuICAgIC8vIENsZWFyIGEgcG90ZW50aWFsIHByZXZpb3VzbHkgbW91bnRlZCBjb21wb25lbnRcclxuICAgIGNsZWFyQ29tcG9uZW50KHNlbGVjdG9yKTtcclxuICAgIGNvbnN0IHRhcmdldERPTUNvbnRhaW5lciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3Ioc2VsZWN0b3IpO1xyXG4gICAgaWYgKCF0YXJnZXRET01Db250YWluZXIpIHtcclxuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYFlvdSBhcmUgdHJ5aW5nIHRvIHJlbmRlciBhIGNvbXBvbmVudCBpbiBhIERPTSBlbGVtZW50IHdoaWNoIGlzIG5vdCBleGlzdGluZywgeW91ciBzZWxlY3RvciBpcyAgJHtzZWxlY3Rvcn1gKTtcclxuICAgIH1cclxuICAgIC8vIFJlbmRlciB0aGUgY29tcG9uZW50XHJcbiAgICBjb25zdCBtb3VudGVkQ29tcG9uZW50ID0gUmVhY3RET00ucmVuZGVyKFxyXG4gICAgICAgIFJlYWN0LmNyZWF0ZUVsZW1lbnQoY29tcG9uZW50LCBvcHRpb25zLnByb3BzLCBvcHRpb25zLmRhdGEpLFxyXG4gICAgICAgIHRhcmdldERPTUNvbnRhaW5lclxyXG4gICAgKTtcclxuICAgIC8vU2F2ZSB0aGUgZmFjdCB0aGF0IGEgY29tcG9uZW50IGlzIG1vdW50ZWQuXHJcbiAgICBtb3VudGVkQ29tcG9uZW50c1tzZWxlY3Rvcl0gPSBtb3VudGVkQ29tcG9uZW50O1xyXG4gICAgY29uc29sZS5pbmZvKCdNb3VudGVkIGNvbXBvbmVudHMgOiAnLCBPYmplY3Qua2V5cyhtb3VudGVkQ29tcG9uZW50cykpO1xyXG4gICAgcmV0dXJuIG1vdW50ZWRDb21wb25lbnQ7XHJcbn1cclxuIl19
